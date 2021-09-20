@@ -6,6 +6,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import technologyAnimation from '../src/animations/technologyAnimation/data.json';
 
+import CallToAction from '../src/ui/CallToAction';
+
 const useStyles = makeStyles(theme => ({
   rowContainer: {
     padding: '0 5em',
@@ -16,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Revolution() {
+export default function Revolution(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -754,6 +756,9 @@ export default function Revolution() {
             width="100%"
           />
         </Grid>
+      </Grid>
+      <Grid item>
+        <CallToAction setValue={props.setValue} />
       </Grid>
     </Grid>
   );
