@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie';
-import { Link } from 'react-router-dom';
+import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
@@ -7,15 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 
-import forwardArrow from '../assets/forwardArrow.svg';
-import backArrow from '../assets/backArrow.svg';
-import swiss from '../assets/swissKnife.svg';
-import access from '../assets/extendAccess.svg';
-import engagement from '../assets/increaseEngagement.svg';
+import integrationAnimation from '../src/animations/integrationAnimation/data.json';
 
-import integrationAnimation from '../animations/integrationAnimation/data.json';
-
-import CallToAction from './ui/CallToAction'
+import CallToAction from '../src/ui/CallToAction';
 
 const useStyles = makeStyles(theme => ({
   heading: {
@@ -68,11 +62,11 @@ export default function MobileApps(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              to="/customsoftware"
+              href="/customsoftware"
               onClick={() => props.setSelectedIndex(1)}
             >
               <img
-                src={backArrow}
+                src="/assets/backArrow.svg"
                 alt="Back to Custom Software Development Page"
               />
             </IconButton>
@@ -109,11 +103,11 @@ export default function MobileApps(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              to="/websites"
+              href="/websites"
               onClick={() => props.setSelectedIndex(3)}
             >
               <img
-                src={forwardArrow}
+                src="/assets/forwardArrow.svg"
                 alt="Forward to Website Development Page"
               />
             </IconButton>
@@ -198,7 +192,7 @@ export default function MobileApps(props) {
             </Typography>
           </Grid>
           <Grid item>
-            <img src={swiss} alt="swiss army knife" />
+            <img src="/assets/swissKnife.svg" alt="swiss army knife" />
           </Grid>
         </Grid>
         <Grid
@@ -216,7 +210,7 @@ export default function MobileApps(props) {
           </Grid>
           <Grid item>
             <img
-              src={access}
+              src="/assets/extendAccess.svg"
               alt="tear-one-off sign"
               style={{ maxWidth: matchesXS ? '20em' : '28em' }}
             />
@@ -229,7 +223,10 @@ export default function MobileApps(props) {
             </Typography>
           </Grid>
           <Grid item>
-            <img src={engagement} alt="app with notification" />
+            <img
+              src="/assets/increaseEngagement.svg"
+              alt="app with notification"
+            />
           </Grid>
         </Grid>
       </Grid>

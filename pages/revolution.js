@@ -4,16 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import vision from '../assets/vision.svg';
-import consultation from '../assets/consultationIcon.svg';
-import mockup from '../assets/mockupIcon.svg';
-import review from '../assets/reviewIcon.svg';
-import design from '../assets/designIcon.svg';
-import build from '../assets/buildIcon.svg';
-import launch from '../assets/launchIcon.svg';
-import maintain from '../assets/maintainIcon.svg';
-import iterate from '../assets/iterateIcon.svg';
-import technologyAnimation from '../animations/technologyAnimation/data.json';
+import technologyAnimation from '../src/animations/technologyAnimation/data.json';
 
 const useStyles = makeStyles(theme => ({
   rowContainer: {
@@ -61,7 +52,7 @@ export default function Revolution() {
       >
         <Grid item lg>
           <img
-            src={vision}
+            src="/assets/vision.svg"
             alt="mountain through binoculars"
             style={{
               maxWidth: matchesSM ? 300 : '40em',
@@ -263,7 +254,7 @@ export default function Revolution() {
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
           <img
-            src={consultation}
+            src="/assets/consultationIcon.svg"
             alt="handshake"
             width="100%"
             style={{ maxWidth: 700 }}
@@ -325,7 +316,7 @@ export default function Revolution() {
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
           <img
-            src={mockup}
+            src="/assets/mockupIcon.svg"
             style={{ maxWidth: 1000 }}
             width="100%"
             alt="basic website design outline"
@@ -386,7 +377,11 @@ export default function Revolution() {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
-          <img src={review} alt="magnifying glass" width="100%" />
+          <img
+            src="/assets/reviewIcon.svg"
+            alt="magnifying glass"
+            width="100%"
+          />
         </Grid>
       </Grid>
       <Grid
@@ -436,7 +431,7 @@ export default function Revolution() {
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
           <img
-            src={design}
+            src="/assets/designIcon.svg"
             alt="paintbrush leaving stroke of paint"
             width="100%"
             style={{ maxWidth: 1000 }}
@@ -488,7 +483,11 @@ export default function Revolution() {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
-          <img src={review} alt="magnifying glass" width="100%" />
+          <img
+            src="/assets/reviewIcon.svg"
+            alt="magnifying glass"
+            width="100%"
+          />
         </Grid>
       </Grid>
       <Grid
@@ -564,7 +563,7 @@ export default function Revolution() {
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
           <img
-            src={build}
+            src="/assets/buildIcon.svg"
             alt="building construction site"
             width="100%"
             style={{ maxWidth: matchesMD ? 700 : 1000 }}
@@ -626,7 +625,7 @@ export default function Revolution() {
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
           <img
-            src={launch}
+            src="/assets/launchIcon.svg"
             alt="rocket"
             style={{ maxWidth: 200 }}
             width="100%"
@@ -687,7 +686,7 @@ export default function Revolution() {
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
           <img
-            src={maintain}
+            src="/assets/maintainIcon.svg"
             alt="wrench tightening bolds"
             width="100%"
             style={{ maxWidth: 500 }}
@@ -749,7 +748,11 @@ export default function Revolution() {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: 'center' }}>
-          <img src={iterate} alt="falling dominoes" width="100%" />
+          <img
+            src="/assets/iterateIcon.svg"
+            alt="falling dominoes"
+            width="100%"
+          />
         </Grid>
       </Grid>
     </Grid>

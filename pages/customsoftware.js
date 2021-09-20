@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie';
-import { Link } from 'react-router-dom';
+import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
@@ -7,19 +7,12 @@ import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 
-import backArrow from '../assets/backArrow.svg';
-import forwardArrow from '../assets/forwardArrow.svg';
-import lightbulb from '../assets/bulb.svg';
-import cash from '../assets/cash.svg';
-import stopwatch from '../assets/stopwatch.svg';
-import roots from '../assets/root.svg';
+import documentsAnimation from '../src/animations/documentsAnimation/data';
+import scaleAnimation from '../src/animations/scaleAnimation/data.json';
+import automationAnimation from '../src/animations/automationAnimation/data.json';
+import uxAnimation from '../src/animations/uxAnimation/data';
 
-import documentsAnimation from '../animations/documentsAnimation/data';
-import scaleAnimation from '../animations/scaleAnimation/data.json';
-import automationAnimation from '../animations/automationAnimation/data.json';
-import uxAnimation from '../animations/uxAnimation/data';
-
-import CallToAction from './ui/CallToAction';
+import CallToAction from '../src/ui/CallToAction';
 
 const useStyles = makeStyles(theme => ({
   heading: {
@@ -102,10 +95,10 @@ export default function CustomSoftware(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              to="/services"
+              href="/services"
               onClick={() => props.setSelectedIndex(0)}
             >
-              <img src={backArrow} alt="Back to Services Page" />
+              <img src="/assets/backArrow.svg" alt="Back to Services Page" />
             </IconButton>
           </Grid>
         </Hidden>
@@ -148,11 +141,11 @@ export default function CustomSoftware(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               onClick={() => props.setSelectedIndex(2)}
             >
               <img
-                src={forwardArrow}
+                src="/assets/forwardArrow.svg"
                 alt="Forward to iOS/Android App Development Page"
               />
             </IconButton>
@@ -179,7 +172,7 @@ export default function CustomSoftware(props) {
             <Typography variant="h4">Save Energy</Typography>
           </Grid>
           <Grid item>
-            <img src={lightbulb} alt="lightbulb" />
+            <img src="/assets/bulb.svg" alt="lightbulb" />
           </Grid>
         </Grid>
         <Grid
@@ -194,7 +187,7 @@ export default function CustomSoftware(props) {
             <Typography variant="h4">Save Time</Typography>
           </Grid>
           <Grid item>
-            <img src={stopwatch} alt="stopwatch" />
+            <img src="/assets/stopwatch.svg" alt="stopwatch" />
           </Grid>
         </Grid>
         <Grid
@@ -209,7 +202,7 @@ export default function CustomSoftware(props) {
             <Typography variant="h4">Save Money</Typography>
           </Grid>
           <Grid item>
-            <img src={cash} alt="cash" />
+            <img src="/assets/cash.svg" alt="cash" />
           </Grid>
         </Grid>
       </Grid>
@@ -309,7 +302,7 @@ export default function CustomSoftware(props) {
         <Grid item container direction="column" alignItems="center">
           <Grid item>
             <img
-              src={roots}
+              src="/assets/roots.svg"
               alt="tree with roots extending out"
               height={matchesSM ? '300em' : '450em'}
               width={matchesSM ? '300em' : '450em'}

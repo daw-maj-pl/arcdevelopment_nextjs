@@ -1,14 +1,11 @@
-import { Link } from 'react-router-dom';
+import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import ButtonArrow from './ui/ButtonArrow';
-import customSoftwareIcon from '../assets/Custom Software Icon.svg';
-import mobileAppsIcon from '../assets/mobileIcon.svg';
-import websitesIcon from '../assets/websiteIcon.svg';
+import ButtonArrow from '../src/ui/ButtonArrow';
 
 const useStyles = makeStyles(theme => ({
   specialText: {
@@ -90,7 +87,7 @@ export default function Services(props) {
             </Typography>
             <Button
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -110,7 +107,7 @@ export default function Services(props) {
             <img
               className={classes.icon}
               alt="mobile phone icon"
-              src={mobileAppsIcon}
+              src="/assets/mobileIcon.svg"
               width="250em"
             />
           </Grid>
@@ -142,7 +139,7 @@ export default function Services(props) {
             </Typography>
             <Button
               component={Link}
-              to="/customsoftware"
+              href="/customsoftware"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -162,7 +159,7 @@ export default function Services(props) {
             <img
               className={classes.icon}
               alt="custom software icon"
-              src={customSoftwareIcon}
+              src="/assets/customSoftware.svg"
             />
           </Grid>
         </Grid>
@@ -194,7 +191,7 @@ export default function Services(props) {
             </Typography>
             <Button
               component={Link}
-              to="/websites"
+              href="/websites"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -214,7 +211,7 @@ export default function Services(props) {
             <img
               className={classes.icon}
               alt="website icon"
-              src={websitesIcon}
+              src="/assets/websiteIcon.svg"
               width="250em"
             />
           </Grid>

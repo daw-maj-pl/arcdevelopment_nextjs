@@ -1,22 +1,17 @@
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+import Link from '../src/Link';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import ButtonArrow from './ui/ButtonArrow';
+import ButtonArrow from '../src/ui/ButtonArrow';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import CallToAction from './ui/CallToAction';
+import CallToAction from '../src/ui/CallToAction';
 
-import animationData from '../animations/landinganimation/data';
-import customSoftwareIcon from '../assets/Custom Software Icon.svg';
-import mobileAppsIcon from '../assets/mobileIcon.svg';
-import websitesIcon from '../assets/websiteIcon.svg';
-import revolutionBackground from '../assets/repeatingBackground.svg';
-import infoBackground from '../assets/infoBackground.svg';
+import animationData from '../src/animations/landinganimation/data';
 
 const useStyles = makeStyles(theme => ({
   animation: {
@@ -93,7 +88,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   revolutionBackground: {
-    backgroundImage: `url(${revolutionBackground})`,
+    backgroundImage: url('/assets/repeatingBackground.svg'),
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -112,7 +107,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   infoBackground: {
-    backgroundImage: `url(${infoBackground})`,
+    backgroundImage: url('/assets/infoBackground.svg'),
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -162,7 +157,7 @@ export default function LandingPage(props) {
               <Grid item>
                 <Button
                   component={Link}
-                  to="/estimate"
+                  href="/estimate"
                   className={classes.estimateButton}
                   variant="contained"
                   onClick={() => props.setValue(5)}
@@ -173,7 +168,7 @@ export default function LandingPage(props) {
               <Grid item>
                 <Button
                   component={Link}
-                  to="/revolution"
+                  href="/revolution"
                   variant="outlined"
                   className={classes.learnButtonHero}
                   onClick={() => props.setValue(2)}
@@ -219,7 +214,7 @@ export default function LandingPage(props) {
             </Typography>
             <Button
               component={Link}
-              to="/customsoftware"
+              href="/customsoftware"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -239,7 +234,7 @@ export default function LandingPage(props) {
             <img
               className={classes.icon}
               alt="custom software icon"
-              src={customSoftwareIcon}
+              src="/assets/customSoftware.svg"
             />
           </Grid>
         </Grid>
@@ -269,7 +264,7 @@ export default function LandingPage(props) {
             </Typography>
             <Button
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -289,7 +284,7 @@ export default function LandingPage(props) {
             <img
               className={classes.icon}
               alt="mobile phone icon"
-              src={mobileAppsIcon}
+              src="/assets/mobileIcon.svg"
             />
           </Grid>
         </Grid>
@@ -319,7 +314,7 @@ export default function LandingPage(props) {
             </Typography>
             <Button
               component={Link}
-              to="/websites"
+              href="/websites"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -339,7 +334,7 @@ export default function LandingPage(props) {
             <img
               className={classes.icon}
               alt="website icon"
-              src={websitesIcon}
+              src="/assets/websiteIcon.svg"
             />
           </Grid>
         </Grid>
@@ -371,7 +366,7 @@ export default function LandingPage(props) {
                   </Typography>
                   <Button
                     component={Link}
-                    to="/revolution"
+                    href="/revolution"
                     variant="outlined"
                     className={classes.learnButtonHero}
                     onClick={() => props.setValue(2)}
@@ -424,7 +419,7 @@ export default function LandingPage(props) {
                 <Grid item>
                   <Button
                     component={Link}
-                    to="/about"
+                    href="/about"
                     variant="outlined"
                     style={{ color: 'white', borderColor: 'white' }}
                     className={classes.learnButton}
@@ -452,7 +447,7 @@ export default function LandingPage(props) {
                 <Grid item>
                   <Button
                     component={Link}
-                    to="/contact"
+                    href="/contact"
                     variant="outlined"
                     style={{ color: 'white', borderColor: 'white' }}
                     className={classes.learnButton}

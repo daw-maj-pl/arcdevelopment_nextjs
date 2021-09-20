@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from '../src/Link';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
@@ -6,14 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Hidden from '@material-ui/core/Hidden';
 
-import backArrow from '../assets/backArrow.svg';
-import forwardArrow from '../assets/forwardArrow.svg';
-import analytics from '../assets/analytics.svg';
-import seo from '../assets/seo.svg';
-import outreach from '../assets/outreach.svg';
-import ecommerce from '../assets/ecommerce.svg';
-
-import CallToAction from './ui/CallToAction';
+import CallToAction from '../src/ui/CallToAction';
 
 const useStyles = makeStyles(theme => ({
   heading: {
@@ -60,11 +53,11 @@ export default function Websites(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               onClick={() => props.setSelectedIndex(2)}
             >
               <img
-                src={backArrow}
+                src="/assets/backArrow.svg"
                 alt="Back to iOS/Android App Development Page"
               />
             </IconButton>
@@ -98,10 +91,13 @@ export default function Websites(props) {
             <IconButton
               style={{ backgroundColor: 'transparent' }}
               component={Link}
-              to="/services"
+              href="/services"
               onClick={() => props.setSelectedIndex(0)}
             >
-              <img src={forwardArrow} alt="Forward to Services Page" />
+              <img
+                src="/assets/forwardArrow.svg"
+                alt="Forward to Services Page"
+              />
             </IconButton>
           </Grid>
         </Hidden>
@@ -127,7 +123,7 @@ export default function Websites(props) {
             </Grid>
             <Grid item>
               <img
-                src={analytics}
+                src="/assets/analytics.svg"
                 style={{ marginLeft: '-2.75em' }}
                 alt="graph with magnifying glass revealing 1's and 0's"
               />
@@ -159,7 +155,10 @@ export default function Websites(props) {
               </Typography>
             </Grid>
             <Grid item>
-              <img src={ecommerce} alt="world outline made of dollar signs" />
+              <img
+                src="/assets/ecommerce.svg"
+                alt="world outline made of dollar signs"
+              />
             </Grid>
           </Grid>
         </Grid>
@@ -204,7 +203,7 @@ export default function Websites(props) {
               </Typography>
             </Grid>
             <Grid item>
-              <img src={outreach} alt="megaphone" />
+              <img src="/assets/outreach.svg" alt="megaphone" />
             </Grid>
           </Grid>
         </Grid>
@@ -239,7 +238,10 @@ export default function Websites(props) {
               </Typography>
             </Grid>
             <Grid item>
-              <img src={seo} alt="website standing on winner's podium" />
+              <img
+                src="/assets/seo.svg"
+                alt="website standing on winner's podium"
+              />
             </Grid>
           </Grid>
         </Grid>

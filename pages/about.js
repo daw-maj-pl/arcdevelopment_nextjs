@@ -3,9 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import history from '../assets/history.svg';
-
-import CallToAction from './ui/CallToAction';
+import CallToAction from '../src/ui/CallToAction';
 
 const useStyles = makeStyles(theme => ({
   missionStatement: {
@@ -119,7 +117,7 @@ export default function About(props) {
         <Grid item>
           <Grid item container justifyContent="center" lg>
             <img
-              src={history}
+              src="/assets/history.svg"
               alt="quill pen sitting on top of book"
               style={{ maxHeight: matchesMD ? 200 : '22em' }}
             />
