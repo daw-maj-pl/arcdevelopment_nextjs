@@ -7,7 +7,10 @@ module.exports = withPlugins([
     {
       /* config for next-optimized-images */
     }
-  ]
+  ],
+  {
+    images: { disableStaticImages: true }
+  }
 
   // your other plugins here
 ]);
