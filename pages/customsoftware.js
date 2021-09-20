@@ -302,7 +302,7 @@ export default function CustomSoftware(props) {
         <Grid item container direction="column" alignItems="center">
           <Grid item>
             <img
-              src="/assets/roots.svg"
+              src="/assets/root.svg"
               alt="tree with roots extending out"
               height={matchesSM ? '300em' : '450em'}
               width={matchesSM ? '300em' : '450em'}

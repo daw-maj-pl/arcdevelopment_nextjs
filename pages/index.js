@@ -88,7 +88,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   revolutionBackground: {
-    backgroundImage: url('/assets/repeatingBackground.svg'),
+    backgroundImage: `url('/assets/repeatingBackground.svg')`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   infoBackground: {
-    backgroundImage: url('/assets/infoBackground.svg'),
+    backgroundImage: `url('/assets/infoBackground.svg')`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
