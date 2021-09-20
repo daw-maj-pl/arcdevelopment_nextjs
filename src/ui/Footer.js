@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from '../Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -68,7 +68,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(0)}
-                to="/"
+                href="/"
                 className={classes.link}
               >
                 Home
@@ -84,7 +84,7 @@ export default function Footer(props) {
                   props.setValue(1);
                   props.setSelectedIndex(0);
                 }}
-                to="/services"
+                href="/services"
                 className={classes.link}
               >
                 Services
@@ -96,7 +96,7 @@ export default function Footer(props) {
                   props.setValue(1);
                   props.setSelectedIndex(1);
                 }}
-                to="/customsoftware"
+                href="/customsoftware"
                 className={classes.link}
               >
                 Custom Software Development
@@ -108,7 +108,7 @@ export default function Footer(props) {
                   props.setValue(1);
                   props.setSelectedIndex(2);
                 }}
-                to="/mobileapps"
+                href="/mobileapps"
                 className={classes.link}
               >
                 iOS/Android App Development
@@ -120,7 +120,7 @@ export default function Footer(props) {
                   props.setValue(1);
                   props.setSelectedIndex(3);
                 }}
-                to="/websites"
+                href="/websites"
                 className={classes.link}
               >
                 Website Development
@@ -133,7 +133,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
-                to="/revolution"
+                href="/revolution"
                 className={classes.link}
               >
                 The Revolution
@@ -142,7 +142,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
-                to="/revolution"
+                href="/revolution"
                 className={classes.link}
               >
                 Vision
@@ -150,7 +150,7 @@ export default function Footer(props) {
               <Grid
                 item
                 component={Link}
-                to="/revolution"
+                href="/revolution"
                 onClick={() => props.setValue(2)}
                 className={classes.link}
               >
@@ -159,7 +159,7 @@ export default function Footer(props) {
               <Grid
                 item
                 component={Link}
-                to="/revolution"
+                href="/revolution"
                 onClick={() => props.setValue(2)}
                 className={classes.link}
               >
@@ -173,7 +173,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(3)}
-                to="/about"
+                href="/about"
                 className={classes.link}
               >
                 About Us
@@ -182,7 +182,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(3)}
-                to="/about"
+                href="/about"
                 className={classes.link}
               >
                 History
@@ -191,7 +191,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(3)}
-                to="/about"
+                href="/about"
                 className={classes.link}
               >
                 Team
@@ -204,7 +204,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(4)}
-                to="/contact"
+                href="/contact"
                 className={classes.link}
               >
                 Contact Us
