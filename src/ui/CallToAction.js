@@ -1,7 +1,7 @@
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+import Link from '../Link';
 import Button from '@material-ui/core/Button';
 import ButtonArrow from './ButtonArrow';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   background: {
-    backgroundImage: url('/assets/background.jpg'),
+    backgroundImage: `url('/assets/background.jpg')`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     height: '60em',
     width: '100%',
     [theme.breakpoints.down('md')]: {
-      backgroundImage: url('/assets/mobileBackground.jpg'),
+      backgroundImage: `url('/assets/mobileBackground.jpg')`,
       backgroundAttachment: 'inherit'
     }
   },
@@ -85,7 +85,7 @@ export default function CallToAction(props) {
             >
               <Button
                 component={Link}
-                to="/revolution"
+                href="/revolution"
                 variant="outlined"
                 className={classes.learnButton}
                 onClick={() => props.setValue(2)}
@@ -104,7 +104,7 @@ export default function CallToAction(props) {
       <Grid item>
         <Button
           component={Link}
-          to="/estimate"
+          href="/estimate"
           variant="contained"
           className={classes.estimateButton}
           onClick={() => props.setValue(5)}
