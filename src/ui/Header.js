@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import Link from '../Link';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -204,7 +204,9 @@ export default function Header(props) {
           }
           break;
         case '/estimate':
-          props.setValue(5);
+          if (props.value !== 5) {
+            props.setValue(5);
+          }
           break;
         default:
           break;
@@ -225,7 +227,7 @@ export default function Header(props) {
             key={`${route}${index}`}
             className={classes.tab}
             component={Link}
-            to={route.link}
+            href={route.link}
             label={route.name}
             aria-owns={route.ariaOwns}
             aria-haspopup={route.ariaPopup}
@@ -235,7 +237,7 @@ export default function Header(props) {
       </Tabs>
       <Button
         component={Link}
-        to="/estimate"
+        href="/estimate"
         variant="contained"
         color="secondary"
         className={classes.button}
@@ -258,7 +260,7 @@ export default function Header(props) {
           <MenuItem
             key={`${option}${i}`}
             component={Link}
-            to={option.link}
+            href={option.link}
             classes={{ root: classes.menuItem }}
             onClick={event => {
               handleMenuItemClick(event, i);
@@ -292,7 +294,7 @@ export default function Header(props) {
               divider
               button
               component={Link}
-              to={route.link}
+              href={route.link}
               selected={props.value === route.activeIndex}
               classes={{ selected: classes.drawerItemSelected }}
               onClick={() => {
@@ -318,7 +320,7 @@ export default function Header(props) {
               root: classes.drawerItemEstimate,
               selected: classes.drawerItemSelected
             }}
-            to="/estimate"
+            href="/estimate"
             selected={props.value === 5}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
@@ -344,7 +346,7 @@ export default function Header(props) {
           <Toolbar disableGutters>
             <Button
               component={Link}
-              to="/"
+              href="/"
               disableRipple
               onClick={() => props.setValue(0)}
               className={classes.logoContainer}
