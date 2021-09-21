@@ -41,6 +41,11 @@ export default function Websites(props) {
         <title key="title">
           Stunning Custom Website Design | Arc Development
         </title>
+        <meta
+          name="description"
+          key="description"
+          content="Completely custom designed and built from scratch to be blazing fast. Optimized code, server-side rendering, and perfect responsive design | 99% PageSpeed Score"
+        />
       </Head>
       <Grid
         item

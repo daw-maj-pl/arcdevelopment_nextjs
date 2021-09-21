@@ -589,11 +589,6 @@ export default function Estimate() {
 
   const softwareSelection = (
     <Grid container direction="column">
-      <Head>
-        <title key="title">
-          Free Custom Software Estimate | Arc Development
-        </title>
-      </Head>
       <Grid
         item
         container
@@ -708,6 +703,16 @@ export default function Estimate() {
 
   return (
     <Grid container direction="row">
+      <Head>
+        <title key="title">
+          Free Custom Software Estimate | Arc Development
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Use our free online estimate calculator to instantly check the cost of your custom software, mobile app, or website design and development project!"
+        />
+      </Head>
       <Grid
         item
         container
