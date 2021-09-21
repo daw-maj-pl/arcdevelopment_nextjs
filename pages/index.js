@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Lottie from 'react-lottie';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Link from '../src/Link';
@@ -133,6 +134,11 @@ export default function LandingPage(props) {
 
   return (
     <Grid container direction="column" className={classes.mainContainer}>
+      <Head>
+        <title key="title">
+          Custom Software, Mobile Apps, and Websites | Arc Development
+        </title>
+      </Head>
       <Grid item>
         {' '}
         {/*-----Hero Block-----*/}

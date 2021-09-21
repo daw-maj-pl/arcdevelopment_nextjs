@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -29,6 +30,9 @@ export default function About(props) {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">About Us - History | Arc Development</title>
+      </Head>
       <Grid
         item
         className={classes.rowContainer}
