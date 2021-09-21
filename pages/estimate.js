@@ -718,6 +718,7 @@ export default function Estimate() {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="arc.com/estimate" />
+        <link rel="canonical" key="canonical" href="arc.com/estimate" />
       </Head>
       <Grid
         item

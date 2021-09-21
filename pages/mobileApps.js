@@ -61,6 +61,7 @@ export default function MobileApps(props) {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="arc.com/mobileapps" />
+        <link rel="canonical" key="canonical" href="arc.com/mobileapps" />
       </Head>
       <Grid
         item

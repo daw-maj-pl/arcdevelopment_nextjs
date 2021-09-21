@@ -139,6 +139,7 @@ export default function Contact(props) {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="arc.com/contact" />
+        <link rel="canonical" key="canonical" href="https://arc.com/contact" />
       </Head>
       <Grid
         item

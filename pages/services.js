@@ -61,6 +61,7 @@ export default function Services(props) {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="arc.com/services" />
+        <link rel="canonical" key="canonical" href="arc.com/services" />
       </Head>
       <Grid
         item

@@ -94,6 +94,7 @@ export default function CustomSoftware(props) {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="arc.com/customsoftware" />
+        <link rel="canonical" key="canonical" href="arc.com/customsoftware" />
       </Head>
       <Grid
         item

@@ -149,6 +149,7 @@ export default function LandingPage(props) {
           key="og:title"
         />{' '}
         <meta property="og:url" key="og:url" content="arc.com" />
+        <link rel="canonical" key="canonical" href="arc.com" />
       </Head>
       <Grid item>
         {' '}
