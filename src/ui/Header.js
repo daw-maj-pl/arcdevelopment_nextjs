@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Hidden from '@material-ui/core/Hidden';
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -357,7 +358,8 @@ export default function Header(props) {
                 src="/assets/logo.svg"
               />
             </Button>
-            {matches ? drawer : tabs}
+            <Hidden mdDown>{tabs}</Hidden>
+            <Hidden lgUp>{drawer}</Hidden>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
