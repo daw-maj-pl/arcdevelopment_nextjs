@@ -55,6 +55,12 @@ export default function Services(props) {
           key="description"
           content="Cutting-edge software, mobile app, and website development services with sleek custom designs - get a free online estimate instantly!"
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Services"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/services" />
       </Head>
       <Grid
         item

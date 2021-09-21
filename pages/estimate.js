@@ -712,6 +712,12 @@ export default function Estimate() {
           key="description"
           content="Use our free online estimate calculator to instantly check the cost of your custom software, mobile app, or website design and development project!"
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to the Midwest | Free Estimate"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="arc.com/estimate" />
       </Head>
       <Grid
         item

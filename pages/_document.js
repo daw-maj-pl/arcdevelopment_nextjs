@@ -10,6 +10,12 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://i.imgur.com/C8evBTM.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="company logo" />
           <link rel="shortcut icon" href="/favicon.png" />
           <link
             rel="stylesheet"
