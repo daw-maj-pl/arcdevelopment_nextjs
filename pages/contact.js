@@ -109,7 +109,7 @@ export default function Contact(props) {
         break;
       case 'phone':
         setPhone(event.target.value);
-        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/.test(
           event.target.value
         );
 
